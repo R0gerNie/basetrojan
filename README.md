@@ -16,5 +16,5 @@
 > 改一下Project---->xiazai Properties--->Linker--->Advanced--->Entery Point修改为"mainCRTStartup"。
 Project---->xiazai Properties--->Linker--->System-->Subsystem改成Windows（/SUBSYSTEM:WINDOWS）
 
-在xp虚拟机下，360安全卫士可以将其报毒：Generic/Trojan.B0.c8b
+在xp虚拟机下，360安全卫士可以将其报毒：Generic/Trojan.B0.c8b，但是加上一个upx壳即可避免之。
 
