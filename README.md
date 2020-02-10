@@ -2,7 +2,7 @@
 一个简单的后台监听木马的原型机。
 
 客户端采用c++的win32编程，服务器使用python脚本来接收客户端发送的内容，中间的连接是udp协议。
-
+//作者逐渐更新中，武汉加油
 * 0开头的版本，均没有任何威胁性，只会将一个字符串“example”发送到作者的服务器上。
 
 ## v0.1
@@ -14,5 +14,5 @@
 > 改一下Project---->xiazai Properties--->Linker--->Advanced--->Entery Point修改为"mainCRTStartup"。
 Project---->xiazai Properties--->Linker--->System-->Subsystem改成Windows（/SUBSYSTEM:WINDOWS）
 
-
+在xp虚拟机下，360安全卫士可以将其报毒：Generic/Trojan.B0.c8b
 
