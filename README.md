@@ -17,4 +17,5 @@
 Project---->xiazai Properties--->Linker--->System-->Subsystem改成Windows（/SUBSYSTEM:WINDOWS）
 
 在xp虚拟机下，360安全卫士可以将其报毒：Generic/Trojan.B0.c8b，但是加上一个upx壳即可避免之。
+有人推荐我用360杀毒来搞，可以查出：HEUR/QVM11.1.2B19.Malware.Gen(加壳)，而不带壳的程序则不报毒
 
