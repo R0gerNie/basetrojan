@@ -13,7 +13,7 @@
 
 ## v0.2
 在win10下与v0.1没有什么区别，但是在xp虚拟机下发现无法运行，在xp及IDE vs2010上可以作如下设置进行编译通过
-> 改一下Project---->xiazai Properties--->Linker--->Advanced--->Entery Point修改为"mainCRTStartup"。
+> 改一下Project---->basetrojan Properties--->Linker--->Advanced--->Entery Point修改为"mainCRTStartup"。
 Project---->xiazai Properties--->Linker--->System-->Subsystem改成Windows（/SUBSYSTEM:WINDOWS）
 
 在xp虚拟机下，360安全卫士可以将其报毒：Generic/Trojan.B0.c8b，但是加上一个upx壳即可避免之。
@@ -38,3 +38,14 @@ v0.3的改进版，稳定性更好，且只需一次运行就可以完成将自�
 
 360杀毒继续没有报毒。
 
+
+
+## v1.0
+
+这个版本起存在略微的泄露个人数据的可能，在fetchdata()中加入了dir命令。
+
+会将扫描的内容发送到远程服务器。
+
+客户端，服务器端分别使用了多线程以利于接下来的开发。
+
+继续没有报毒，但是开发过程中，编译后有弹出恶意程序运行的弹窗。
